@@ -26,6 +26,49 @@
 
     <h2>¡Compra tus entradas ahora!</h2>
     <p>No esperes más, asegúrate de conseguir tus entradas para el concierto de BTS "ARIRANG" antes de que se agoten. ¡Únete a millones de fans en todo el mundo para celebrar la música y la magia de BTS!</p>
+
+    <section class="card faq">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+            <summary>¿Cómo consigo entradas?</summary>
+            <p>Las entradas estarán disponibles en línea a partir del 1 de noviembre de 2024. Usa los canales oficiales y evita revendedores no autorizados.</p>
+        </details>
+        <details>
+            <summary>¿Qué incluirá el show?</summary>
+            <p>El concierto tendrá canciones del álbum ARIRANG, coreografías poderosas, efectos visuales espectaculares y sorpresas especiales para los fans.</p>
+        </details>
+        <details>
+            <summary>¿Puedo llevar pancartas al estadio?</summary>
+            <p>Sí, puedes llevar pancartas pequeñas y respetar las normas del recinto para garantizar una experiencia segura y ordenada.</p>
+        </details>
+    </section>
+
+    <section class="card interaction">
+        <h2>Obtén la imagen de fondo del concierto</h2>
+        <p>Completa el formulario y recibe el enlace para descargar la imagen de fondo del concierto BTS.</p>
+        <form id="download-form">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+
+            <button type="submit">Enviar y obtener imagen</button>
+        </form>
+        <div id="download-result" class="download-result hidden">
+            <p>¡Gracias por participar! Ya puedes descargar la imagen del fondo del concierto.</p>
+            <a href="bts-concert.jpg" download>Descargar fondo exclusivo</a>
+        </div>
+    </section>
     </main>
+    <script>
+        const form = document.getElementById('download-form');
+        const result = document.getElementById('download-result');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            result.classList.remove('hidden');
+            form.scrollIntoView({behavior: 'smooth', block: 'end'});
+        });
+    </script>
 </body>
 </html>
