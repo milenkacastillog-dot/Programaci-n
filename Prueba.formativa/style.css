@@ -1,0 +1,122 @@
+:root {
+    --bg: #0e1636;
+    --panel: rgba(255, 255, 255, 0.12);
+    --text: #f8f8ff;
+    --accent: #7f5af0;
+    --accent-2: #ff79c6;
+    --muted: #d3d7f1;
+    --border: rgba(255, 255, 255, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top left, rgba(127, 90, 240, 0.35), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(255, 121, 198, 0.25), transparent 25%),
+                linear-gradient(180deg, #0e1636 0%, #121a3d 55%, #0a1128 100%);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1519241047957-be31d7379a5d?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    opacity: 0.07;
+    pointer-events: none;
+    z-index: -1;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+}
+
+p {
+    font-size: 1rem;
+    max-width: 720px;
+    margin: 0 auto 1.45rem;
+    color: var(--muted);
+}
+
+ul {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    padding: 24px 28px;
+    list-style: none;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+    max-width: 720px;
+    margin: 0 auto 2rem;
+}
+
+li {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li strong {
+    color: #ffffff;
+}
+
+section.card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 28px;
+    margin: 2rem auto 0;
+    max-width: 720px;
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.18);
+}
+
+footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.68);
+    padding: 18px 0 10px;
+    font-size: 0.94rem;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        padding: 32px 16px 48px;
+    }
+
+    ul {
+        padding: 20px;
+    }
+}
