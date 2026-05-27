@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <title>HTML Form Project</title>
+</head>
+<body>
+    <form>
+        <section class="personal-data">
+            <h2>Personal Data</h2>
+            <hr>
+            <label for="full-name">Full Name: <span class="required">*</span></label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <label for="dob">Date of Birth: <span class="required">*</span></label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="rut">RUT / Document Number: <span class="required">*</span></label>
+            <input type="text" id="rut" name="rut" required>
+
+            <fieldset>
+                <legend>Gender: <span class="required">*</span></legend>
+                <label for="gender-male"><input type="radio" id="gender-male" name="gender" value="male" required> Male</label>
+                <label for="gender-female"><input type="radio" id="gender-female" name="gender" value="female"> Female</label>
+                <label for="gender-non-binary"><input type="radio" id="gender-non-binary" name="gender" value="non-binary"> Non-binary</label>
+                <label for="gender-prefer-not-to-say"><input type="radio" id="gender-prefer-not-to-say" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
+            </fieldset>
+
+            <label for="nationality">Nationality: <span class="required">*</span></label>
+            <select id="nationality" name="nationality" required>
+                <option value="">Select your nationality</option>
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="australia">Australia</option>
+                <option value="chile">Chile</option>
+                <option value="france">France</option>
+                <option value="spain">Spain</option>
+                <option value="brazil">Brazil</option>
+            </select>
+        </section>
+
+        <section class="contact-access-data">
+            <h2>Contact and Access Data</h2>
+            <hr>
+            <label for="email">Email: <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="email-confirm">Confirm Email: <span class="required">*</span></label>
+            <input type="email" id="email-confirm" name="email-confirm" required>
+
+            <label for="password">Password: <span class="required">*</span></label>
+            <input type="password" id="password" name="password" required>
+            <div id="password-strength"></div>
+
+            <label for="password-confirm">Confirm Password: <span class="required">*</span></label>
+            <input type="password" id="password-confirm" name="password-confirm" required>
+
+            <label for="phone">Phone Number: <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+        </section>
+
+        <section class="delivery-address">
+            <h2>Delivery Address</h2>
+            <hr>
+            <label for="country">Country: <span class="required">*</span></label>
+            <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="australia">Australia</option>
+                <option value="chile">Chile</option>
+                <option value="france">France</option>
+                <option value="spain">Spain</option>
+                <option value="brazil">Brazil</option>
+            </select>
+
+            <label for="state">Province/State: <span class="required">*</span></label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="city">City: <span class="required">*</span></label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="street">Street and Number: <span class="required">*</span></label>
+            <input type="text" id="street" name="street" required>
+
+            <label for="postal-code">Postal Code: <span class="required">*</span></label>
+            <input type="text" id="postal-code" name="postal-code" required>
+
+            <label for="floor-department">Floor and Apartment (Optional):</label>
+            <input type="text" id="floor-department" name="floor-department">
+
+            <label for="additional-instructions">Additional Instructions (Optional):</label>
+            <textarea id="additional-instructions" name="additional-instructions" maxlength="200"></textarea>
+        </section>
+
+        <section class="preferences-terms">
+            <h2>Preferences and Terms</h2>
+            <hr>
+
+            <fieldset>
+                <legend>Categories of Interest:</legend>
+                <label for="interest-electronics"><input type="checkbox" id="interest-electronics" name="interest" value="electronics"> Electronics</label>
+                <label for="interest-clothing"><input type="checkbox" id="interest-clothing" name="interest" value="clothing"> Clothing</label>
+                <label for="interest-home"><input type="checkbox" id="interest-home" name="interest" value="home"> Home</label>
+                <label for="interest-others"><input type="checkbox" id="interest-others" name="interest" value="others"> Others</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Type of Client: <span class="required">*</span></legend>
+                <label for="client-final"><input type="radio" id="client-final" name="client-type" value="final-consumer" required> Final Consumer</label>
+                <label for="client-reseller"><input type="radio" id="client-reseller" name="client-type" value="reseller"> Reseller</label>
+                <label for="client-company"><input type="radio" id="client-company" name="client-type" value="company"> Company</label>
+            </fieldset>
+
+            <label for="how-did-you-know">How did you hear about us? <span class="required">*</span></label>
+            <select id="how-did-you-know" name="how-did-you-know" required>
+                <option value="">Select an option</option>
+                <option value="social-media">Social Media</option>
+                <option value="recommendation">Recommendation</option>
+                <option value="web-search">Web Search</option>
+                <option value="advertising">Advertising</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="newsletter">
+                <input type="checkbox" id="newsletter" name="newsletter" value="subscribe"> Subscribe to our newsletter
+            </label>
+
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                I accept the <a href="#" target="_blank">Terms and Conditions</a>
+            </label>
+
+            <label for="privacy">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                I accept the <a href="#" target="_blank">Privacy Policy</a>
+            </label>
+        </section>
+
+        <div class="form-actions" style="text-align: center; margin-top: 20px;">
+            <button type="submit" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Register</button>
+            <button type="reset" style="background-color: #6C757D; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Clear Form</button>
+            <a href="#" style="display: inline-block; margin-top: 10px; color: #007BFF; text-decoration: none;">Already have an account? Log in</a>
+        </div>
+    </form>
+</body>
+</html>

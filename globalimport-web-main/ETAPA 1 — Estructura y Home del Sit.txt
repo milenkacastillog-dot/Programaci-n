@@ -1,0 +1,68 @@
+ETAPA 1 — Estructura y Home del Sitio
+
+1)
+necesito una barra de navegación que contenga el nombre "GlobalImport S.A." en el lado izquierdo y link de navegación en el inicio, servicios, contacto y registro, el link de "registro" debe direccionar a la página registro.html y La navegación debe ser responsive: en pantallas pequeñas puede simplificarse (no se
+exige hamburger menu, pero suma). 
+
+en el encabezado principal necesito un banner llamativo que este relacionado con importación o comercio, el titulo debe estar en h1 con el nombre "GlobalImport S.A.", un Subtítulo o slogan de la empresa y botón de llamada a la acción (CTA) que lleve a la sección de servicios o al formulario de registro. 
+
+2)
+Necesito agregar una sección de servicios, en esta debe mostrar categorías de productos o servicios que pueda ofrecer la empresa de importación y distribución de productos electrónicos, indumentaria y artículos del hogar, cada servicio debe mostrarse como una tarjeta que contenga una imagen representativa, titulo del servicio, descripción breve (entre 2-3 oraciones) y Las tarjetas deben estar distribuidas en una grilla (grid o flexbox, mínimo 2 columnas en desktop).
+
+también necesito agregar una sección que se llame "¿Por qué elegirnos?" donde debe tener 5 puntos destacados que generen confianza, experiencia, variedad de productos y entre más, esta puede ser una sección simple con iconos y texto. 
+
+al final un Footer con nombre de la empresa "GlobalImport S.A.", links a redes sociales, email y teléfono de contactos.
+
+3) 
+necesito arreglar el tema del contacto, necesito que el link de navegación del contacto me dirija al footer, donde esta los links de las redes sociales y contacto telefónico y email.
+
+4)
+para el estilo, en style.css, necesito mínimo 2 o 3 paletas de colores coherentes y definidos, que no sean fuertes o incomodo a la vista, al menos 2 tipografías distintas, se puede utilizar Google Fonts, también necesito que las cards de servicios contengan box-shadow y efecto hover, el hero debe ocupar el 100% del ancho de la pantalla y debo tener un uso obligatorio de Flexbox o CSS Grid para el layout de las cards.
+
+
+ETAPA 2 - Formulario de Registro de Usuario
+
+1)
+Necesito un formulario que este dividido en al menos 4 secciones, con títulos, separadores y distintos fondos. En la primera sección deben ir los datos personales, Nombre completo con input text, fecha de nacimiento con input date, Rut o numero de documento aquí puede variar en input number o text, género con las opciones masculino, femenino, no binario y prefiero no decir y al final nacionalidad con al menos 8 países listados. 
+
+2)
+Para segunda sección debe tener los datos de contacto y acceso con correo electrónico con input email y una confirmación, contraseña con input password, requerido, con indicador visual de fuerza — puede ser solo
+visual en esta etapa y su confirmación de contraseña, y finalmente el teléfono con input tel y placeholder que indique el formato esperado. Para la siguiente sección debe ir la dirección de entrega con el país en select, provincia/estado en input text, ciudad con input text, Calle y número en input text, el código postal en input text, Piso y departamento que sea input text y opcional, y referencia o instrucciones adicionales en textarea, máximo 200 caracteres y opcional.
+
+3)
+Finalmente la ultima sección debe ir las preferencias y términos con categorías de interés (checkboxes múltiples: Electrónica, Indumentaria, Hogar, Otros), Tipo de cliente  (radio buttons: Consumidor final, Revendedor, Empresa), ¿Cómo nos conociste? (select: Redes sociales, Recomendación, Búsqueda web, Publicidad, Otro), Suscripción al newsletter (checkbox individual), Aceptación de Términos y Condiciones con checkbox obligatorio y con link a una página ficticia
+o modal, y Aceptación de la Política de Privacidad con checkbox obligatorio, además botones de acción de "Registrarme" en submit, centrado y con estilo destacado, "Limpiar formulario" en reset y con estilo secundario, y "Ya tengo cuenta, iniciar sesión" que sea ficticio.
+
+4)
+necesito mejorar el estilo del formulario, con campos que se vean en distintos estados :focus (borde de color y sombra suave)y que se diferencien entre todos, los campos con error deben tener una clase CSS lista para aplicar borde rojo llamativo. También el formulario debe estar centrado con un ancho máximo de 700-800px. El diseño debe ser responsive: en mobile los campos ocupan el 100% del ancho y finalmente que se haga uso de CSS Grid o Flexbox para alinear campos en dos columnas en desktop.
+
+
+ETAPA 3 - Validación del Formulario con JavaScript
+
+1)
+Necesito crear validaciones que sean solo con JavaScript vanilla, Las validaciones requeridas son: 
+Validaciones de Datos Personales
+Nombre completo: Solo letras y espacios. Mínimo 3 caracteres, máximo 60. No puede quedar vacío.
+Fecha de nacimiento: El usuario debe ser mayor de 18 años al momento del registro.
+Rut: Solo números. Entre 7 y 8 dígitos. Debe validar como rut chileno.
+Género y Nacionalidad: Deben tener una opción seleccionada distinta al placeholder.
+
+Validaciones de Contacto y Acceso
+Email: El formato válido debe contener @ y dominio. Usar expresión regular.
+Confirmar email: Debe coincidir exactamente con el campo email.
+Contraseña: Mínimo 8 caracteres. Debe contener al menos: 1 mayúscula, 1
+número y 1 carácter especial (!@#$%^&*).
+Confirmar contraseña: Debe coincidir exactamente con la contraseña.
+Teléfono: Solo dígitos y puede incluir +, -, espacios. Mínimo 8 dígitos numéricos.
+
+2)
+Validaciones de Dirección
+Trabajo Práctico — Desarrollo Web con HTML & JS Comercio Electrónico
+Programación Front End
+Campo Regla de validación
+País y Provincia No pueden estar vacíos.
+Ciudad Solo letras y espacios, mínimo 2 caracteres.
+Calle y número No puede estar vacío. Mínimo 5 caracteres.
+Código postal Solo alfanumérico, entre 4 y 10 caracteres.
+Textarea (referencia) Si se completa, no puede superar los 200 caracteres (mostrar
+contador en tiempo real)
