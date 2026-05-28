@@ -157,31 +157,52 @@ section h2 {
 
 .tarjeta {
     background-color: var(--light-gray);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
 }
 
 .tarjeta:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
 }
 
 .tarjeta img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: block;
+    border-radius: 12px 12px 0 0;
+    filter: brightness(0.95);
+}
+
+.tarjeta:hover img {
+    transform: scale(1.1);
+    filter: brightness(1);
 }
 
 .tarjeta h3 {
-    margin: 1rem;
+    margin: 1.2rem 1.5rem 0.8rem;
     color: var(--dark-gray);
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.tarjeta:hover h3 {
+    color: var(--primary-blue);
 }
 
 .tarjeta p {
-    margin: 0 1rem 1rem;
-    color: #666;
+    margin: 0 1.5rem 1.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
 /* ¿Por qué elegirnos? */
